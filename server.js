@@ -1,12 +1,15 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+
+require("dotenv").config();
+
+const port = process.env.port;
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
 
 app.get('/ping', (request, response) => {
-    response.send('Pinging?');
+    response.send('Hello there');
 });
 

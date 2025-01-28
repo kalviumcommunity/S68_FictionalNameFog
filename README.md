@@ -8,5 +8,4 @@ The key features that will be included are:
 - Function for the user to add names.
 - Function to randomly display a name based on fixed conditions that the user can set.
 
-#### DEPLOY LINK
-https://s68-fictionalnamefog.onrender.com
+##### DEPLOY LINK - https://s68-fictionalnamefog.onrender.com

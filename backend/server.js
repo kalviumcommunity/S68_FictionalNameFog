@@ -8,15 +8,21 @@ require("dotenv").config({
 
 const port = process.env.port || 3000;
 const url = process.env.url;
+let status = "Database not connected";
 
 app.listen(port, async() => {
     try {
         await connectDatabase(url);
         console.log(`Server is running on port ${port}`);
+        status = "Database connected successfully"
     }
     catch(error) {
         console.log(error)
     }
+})
+
+app.get("/", (request, response) => {
+    response.send(status);
 })
 
 app.get('/ping', (request, response) => {

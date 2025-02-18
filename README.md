@@ -16,4 +16,7 @@ The key features that will be included are:
 Added entity data to Mongo, and connected to the Mongo Database.
 
 ### CRUD Operations
-Created CRUD operations (GET, POST, PUT, DELETE) and tested with Bruno API Testing
+Created CRUD operations (GET, POST, PUT, DELETE) and tested with Bruno API Testing.
+
+### Base Frontend Setup
+Created Vite setup for frontend and created a landing page with 4 buttons based on Key Features.

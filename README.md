@@ -14,3 +14,6 @@ The key features that will be included are:
 
 ### Mongo Atlas Connection
 Added entity data to Mongo, and connected to the Mongo Database.
+
+### CRUD Operations
+Created CRUD operations (GET, POST, PUT, DELETE) and tested with Bruno API Testing

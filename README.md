@@ -20,3 +20,5 @@ Created CRUD operations (GET, POST, PUT, DELETE) and tested with Bruno API Testi
 
 ### Base Frontend Setup
 Created Vite setup for frontend and created a landing page with 4 buttons based on Key Features.
+
+Landing page only has buttons because there is no design as of yet, and the buttons are in name only to show what key features will be available.

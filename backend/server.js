@@ -8,7 +8,7 @@ require("dotenv").config({
 });
 
 const port = process.env.port || 3000;
-const url = process.env.url;
+const url = process.env.databaseURL;
 let status;
 
 app.listen(port, async() => {

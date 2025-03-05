@@ -12,6 +12,7 @@
     background: none;
     padding: 10px;
     border-bottom: 2px solid transparent;
+    cursor: pointer;
 }
 
 .landingContainer button:hover {

@@ -9,6 +9,7 @@ function Landing() {
     return (
         <>
             <div className="landingContainer"> 
+                <button onClick={() => navigate("/")}> Home </button>
                 <button onClick={() => navigate("/viewnames")}> View all </button>
                 <button> Hall of Fame </button>
                 <button> Add Name </button>

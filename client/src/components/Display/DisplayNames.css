@@ -1,3 +1,22 @@
-/* .fetchButton {
-    width
-} */
+.displayNamesContainer {
+    /* border: 2px solid black; */
+    padding: 10px;
+}
+
+.fetchButton {
+    font-size: 1.2em;
+    background: none;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.fetchButton:hover {
+    transition: 0.3s;
+    border: 1px solid black;
+    background-color: rgb(123, 207, 255);
+}
+
+#displayNamesMain {
+    font-size: 1.1rem;
+}

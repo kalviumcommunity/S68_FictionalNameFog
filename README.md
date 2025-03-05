@@ -26,4 +26,7 @@ Landing page only has buttons because there is no design as of yet, and the butt
 ### Deployment
 Deployed Frontend on Netlify
 
+### Design A Component
+Created a frontend component to display names from the database
+
 Deploy Link: https://asapname.netlify.app/

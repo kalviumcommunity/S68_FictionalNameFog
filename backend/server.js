@@ -3,6 +3,9 @@ const app = express();
 const connectDatabase = require("./src/database/database");
 const routerMain = require("./src/controller/routes");
 
+const cors = require("cors");
+app.use(cors());
+
 require("dotenv").config({
     path: "./src/config/.env"
 });

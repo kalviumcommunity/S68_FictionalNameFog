@@ -1,0 +1,20 @@
+.landingContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    border-bottom: 1px solid rgb(146, 146, 146);
+    padding: 10px;
+    place-items: center;
+    margin-bottom: 5px;
+}
+
+.landingContainer button {
+    border: none;
+    background: none;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+}
+
+.landingContainer button:hover {
+    transition: 0.5s;
+    border-bottom: 2px solid black;
+}

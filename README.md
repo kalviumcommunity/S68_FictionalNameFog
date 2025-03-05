@@ -32,4 +32,6 @@ Created a frontend component to display names from the database
 ### Using The Component
 Connected the component to the backend to retrieve names from the database
 
+---
+
 Deploy Link: https://asapname.netlify.app/

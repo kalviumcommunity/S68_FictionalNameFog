@@ -3,14 +3,19 @@ import "./DisplayNames.css";
 import axios from "axios"
 
 function DisplayNames() {
+
+    const nameLink = import.meta.env.VITE_LINK;
+    console.log(nameLink)
+
     const [userData, setUserData] = useState([]);
 
     const fetchUserData = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/");
+            const response = await axios.get(nameLink);
             setUserData(response.data);
             console.log("Successfully retrieved details", response.data);
-        } catch (error) {
+        } 
+        catch (error) {
             console.log("Error retrieving details", error);
         }
     };

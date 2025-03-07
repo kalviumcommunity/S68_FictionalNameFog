@@ -32,4 +32,10 @@ Created a frontend component to display names from the database
 ### Using The Component
 Connected the component to the backend to retrieve names from the database
 
+### Inserting An Entity
+Created new **Add Name** page, which is connected to the backend and adds the information to the database.
+These names can be viewed at the "**/viewnames**" route, or by clicking View Names on the navbar.
+
+---
+
 Deploy Link: https://asapname.netlify.app/

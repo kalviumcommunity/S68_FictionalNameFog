@@ -3,6 +3,7 @@ import './App.css'
 import Landing from "./components/Landing/landing"
 import DisplayNames from "./components/Display/DisplayNames"
 import { Routes, Route } from "react-router-dom"
+import AddName from './components/AddName/AddName'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
 		
 		<Routes>
 			<Route path="/viewnames" element={<DisplayNames />} />
+			<Route path="/addnames" element={<AddName />} />
 		</Routes>
     	
 		</>

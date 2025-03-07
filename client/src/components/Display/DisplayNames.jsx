@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import "./DisplayNames.css";
 import axios from "axios"
 
-
-
 function DisplayNames() {
 
     const nameLink = import.meta.env.VITE_LINK;
@@ -16,7 +14,8 @@ function DisplayNames() {
             const response = await axios.get(nameLink);
             setUserData(response.data);
             console.log("Successfully retrieved details", response.data);
-        } catch (error) {
+        } 
+        catch (error) {
             console.log("Error retrieving details", error);
         }
     };

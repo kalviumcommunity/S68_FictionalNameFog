@@ -10,11 +10,11 @@ function Landing() {
         <>
             <div className="landingContainer"> 
                 <button onClick={() => navigate("/")}> Home </button>
-                <button onClick={() => navigate("/viewnames")}> View all </button>
+                <button onClick={() => navigate("/addnames")}> Add Name </button>
                 <button> Hall of Fame </button>
-                <button> Add Name </button>
-                <button> Login </button>
+                <button onClick={() => navigate("/viewnames")}> View all </button>
                 <button> Filter </button>
+                <button> Login </button>
             </div>
         </>
     )

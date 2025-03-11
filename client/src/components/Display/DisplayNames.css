@@ -3,6 +3,10 @@
     padding: 10px;
 }
 
+.displayNamesContainer span {
+    font-size: 10px;
+}
+
 .fetchButton {
     font-size: 1.2em;
     background: none;
@@ -19,4 +23,18 @@
 
 #displayNamesMain {
     font-size: 1.1rem;
+}
+
+.viewerButtonDiv {
+    display: grid;
+    /* border: 2px solid black; */
+    width: 10%;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+#UDButton {
+    background: none;
+    padding: 10px;
+    cursor: pointer;
 }

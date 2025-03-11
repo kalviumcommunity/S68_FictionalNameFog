@@ -36,6 +36,12 @@ Connected the component to the backend to retrieve names from the database
 Created new **Add Name** page, which is connected to the backend and adds the information to the database.
 These names can be viewed at the "**/viewnames**" route, or by clicking View Names on the navbar.
 
+### Updating & Deleting An Entity In React
+Implemented **Edit** and **Delete** functionalities for managing entities in the database.
+
+- **Edit**: Clicking the "Edit" button navigates to a form where the user can update entity details. On submission, the updated information is sent to the backend and stored in the database.
+- **Delete**: Clicking the "Delete" button removes the selected entity from the database and triggers a re-render to reflect the changes in the UI.
+
 ---
 
 Deploy Link: https://asapname.netlify.app/

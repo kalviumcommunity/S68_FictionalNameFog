@@ -30,7 +30,7 @@ function DisplayNames() {
 
     const handleDelete = async (id) => {
         try {
-            axios.delete(`${import.meta.env.VITE_LINK}${id}`);
+            await axios.delete(`${import.meta.env.VITE_LINK}${id}`);
             console.log("Deletion Successful");
             setUserData((prevData) => prevData.filter(user => user._id !== id));
             
@@ -46,12 +46,11 @@ function DisplayNames() {
                 <div key={user._id}>
                     <p id="displayNamesMain"> 
                         {index + 1}. {user.name} <br />
-                        <span> ID - {user._id} </span>
                     </p>
 
                     <div className="viewerButtonDiv">
                         <button id="UDButton" onClick={() => {
-                            navigate("/editData", {state: { user }})
+                            navigate("/editData", { state: { user } })
                         }}> Update </button>
 
                         <button id="UDButton" onClick={() => handleDelete(user._id)}> Delete </button>

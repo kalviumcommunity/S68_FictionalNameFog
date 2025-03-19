@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 function EditName() {
 
     const location = useLocation();
-    const user = location.state?.user || { name: "", source: "", creator: "", id: ""};
+    const user = location.state ?.user || { name: "", source: "", creator: "", id: ""};
     const navigate = useNavigate();
 
     const [information, setInformation] = useState({
@@ -13,13 +13,14 @@ function EditName() {
         source: user.source, 
         creator: user.creator,
     });
+    
     const [id, setId] = useState(user._id); 
     
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (!id) {
-            alert("Enter ID");
+        if (!information.name || !information.source || !information.creator) {
+            alert("Missing fields");
             return
         }
 
@@ -37,26 +38,22 @@ function EditName() {
         <>
             <div className="addMain">
                 <form className="addMainForm" onSubmit={handleSubmit}>
-                    {/* <label> ID: </label>
-                    <input type="text" onChange={(e) => {
-                        setId(e.target.value)
-                    }}/> */}
                     <label> Name: </label>
-                    <input type="text" value={user.name} onChange={(e) => {
+                    <input type="text" value={information.name} onChange={(e) => {
                         setInformation((previous) => ({
                             ...previous,
                             name: e.target.value,
                         }))
                     }}/>
                     <label> Source: </label>
-                    <input type="text" value={user.source} onChange={(e) => {
+                    <input type="text" value={information.source} onChange={(e) => {
                         setInformation((previous) => ({
                             ...previous,
                             source: e.target.value,
                         }))
                     }}/>
                     <label> Creator: </label>
-                    <input type="text" value={user.creator} onChange={(e) => {
+                    <input type="text" value={information.creator} onChange={(e) => {
                         setInformation((previous) => ({
                             ...previous,
                             creator: e.target.value,

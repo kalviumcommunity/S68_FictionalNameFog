@@ -1,4 +1,5 @@
 const {Router} = require('express');
+const mongoose = require("mongoose");
 const routerModel = require("./../models/schema");
 
 const routerMain = Router();
@@ -9,6 +10,13 @@ routerMain.post("/", async (request, response) => {
         source,
         creator,
     } = request.body;
+
+    if (!name?.trim() || !source?.trim() || !creator?.trim()) {
+        return response.status(400).json({
+            message: "Missing fields found, information cannot be added."
+        })
+        alert("Missing fields found, information cannot be added.")
+    }
 
     try {
         const newItem = new routerModel({
@@ -53,16 +61,21 @@ routerMain.put("/:id", async (request, response) => {
     const { id } = request.params;
     const { name, source, creator } = request.body;
 
-    if (!name && !creator && !source) {
+    if (!mongoose.Types.ObjectId.isValid(id)) {
         return response.status(400).json({
-            message: "At least one of name and creator and source is required to update.",
+            message: "Invalid ID format.",
+        });
+    }
+
+    if (!name?.trim() && !source?.trim() && !creator?.trim()) {
+        return response.status(400).json({
+            message: "At least one valid field (name, source, creator) is required to update.",
         });
     }
 
     try {
         const updatedItem = await routerModel.findByIdAndUpdate(
-            id,
-            { name, source, creator },
+            id, { name, source, creator },
         );
 
         if (!updatedItem) {
@@ -75,7 +88,8 @@ routerMain.put("/:id", async (request, response) => {
             message: "Item updated successfully",
             item: updatedItem,
         });
-    } catch (error) {
+    } 
+    catch (error) {
         console.log(error);
         response.status(500).json({
             message: "Failed to update item",
@@ -86,6 +100,12 @@ routerMain.put("/:id", async (request, response) => {
 
 routerMain.delete("/:id", async (request, response) => {
     const { id } = request.params;
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return response.status(400).json({
+            message: "Invalid ID format.",
+        });
+    }
 
     try {
         const deletedItem = await routerModel.findByIdAndDelete(id);
@@ -99,7 +119,8 @@ routerMain.delete("/:id", async (request, response) => {
         response.status(200).json({
             message: "Item deleted successfully",
         });
-    } catch (error) {
+    } 
+    catch (error) {
         console.log(error);
         response.status(500).json({
             message: "Failed to delete item",

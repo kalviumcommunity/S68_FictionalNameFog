@@ -42,6 +42,9 @@ Implemented **Edit** and **Delete** functionalities for managing entities in the
 - **Edit**: Clicking the "Edit" button navigates to a form where the user can update entity details. On submission, the updated information is sent to the backend and stored in the database.
 - **Delete**: Clicking the "Delete" button removes the selected entity from the database and triggers a re-render to reflect the changes in the UI.
 
+### User Validation
+Added validation for all entity functions in the routes.js file.
+
 ---
 
 Deploy Link: https://asapname.netlify.app/

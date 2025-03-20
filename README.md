@@ -46,8 +46,8 @@ Implemented **Edit** and **Delete** functionalities for managing entities in the
 Added validation for all entity functions in the routes.js file.
 
 ### Adding Relations Between Entities
-Created basic user schema, and added "**createdBy**" to each name.
-Added a dropdown in displayNames.jsx to filter names based on user.
+- Created basic user schema, and added "**createdBy**" to each name.
+- Added a dropdown in displayNames.jsx to filter names based on user.
 
 ---
 

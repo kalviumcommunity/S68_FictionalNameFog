@@ -5,16 +5,27 @@ import { useNavigate } from 'react-router-dom';
 
 function AddName() {
 
+    const userName = "Jack"
+
     const [information, setInformation] = useState({
         name: "",
         source: "",
         creator: "",
+        createdBy: userName, 
     });
-
+    
     const navigate = useNavigate();
 
+    
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (!information.name || !information.source || !information.creator) {
+            alert("Missing fields");
+            return
+        }
+
         try {
             const response = await axios.post(`${import.meta.env.VITE_LINK}`, information);
             console.log("Successfully added");

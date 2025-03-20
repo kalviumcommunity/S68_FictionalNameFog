@@ -4,6 +4,7 @@ const connectDatabase = require("./src/database/database");
 const routerMain = require("./src/controller/routes");
 
 const cors = require("cors");
+const userRouter = require('./src/controller/user');
 app.use(cors());
 
 require("dotenv").config({
@@ -26,9 +27,6 @@ app.listen(port, async() => {
     }
 })
 
-// app.get("/", (request, response) => {
-//     response.send(status);
-// })
 
 app.get('/ping', (request, response) => {
     response.send('Hello there');
@@ -37,3 +35,5 @@ app.get('/ping', (request, response) => {
 app.use(express.json());
 
 app.use("/", routerMain);
+
+app.use("/", userRouter);

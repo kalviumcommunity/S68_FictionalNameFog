@@ -12,7 +12,12 @@ const schematic = new mongoose.Schema({
     creator: {
         type: String,
         required: true,
+    },
+    createdBy: {
+        type: String,
+        required: true,
     }
+
 })
 
 const SchematicMain = mongoose.model("Menu", schematic);

@@ -49,6 +49,9 @@ Added validation for all entity functions in the routes.js file.
 - Created basic user schema, and added "**createdBy**" to each name.
 - Added a dropdown in displayNames.jsx to filter names based on user.
 
+### Using SQL database
+Connected to SQL Database.
+
 ---
 
 Deploy Link: https://asapname.netlify.app/

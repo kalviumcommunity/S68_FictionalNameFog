@@ -52,6 +52,11 @@ Added validation for all entity functions in the routes.js file.
 ### Using SQL database
 Connected to SQL Database.
 
+### Working With Cookies
+Created endpoints with the following actions.
+- Logging in and setting the username in a cookie.
+- Logging out and removing the cookie from the browser.
+
 ---
 
 Deploy Link: https://asapname.netlify.app/
